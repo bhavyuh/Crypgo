@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypgo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="imgs/favicon.ico"
+      type="image/x-icon"
+      sizes="30x32"
+    />
+  </head>
+  <body>
+    <header
+      id="site-header"
+      class="md:pt-14 pt-5 pb-5 fixed top-0 z-25 w-full bg-transparent transition-all duration-300"
+    >
+      <div class="flex justify-between items-center">
+        <div
+          class="container mx-auto lg:py px-4 flex justify-between items-center"
+        >
+          <div>
+            <a href="#"><img class="cursor-pointer" src="imgs/logo.svg" /></a>
+          </div>
+          <nav
+            class="font-medium text-[#d8dbdb] hidden whitespace-nowrap lg:flex gap-8 text-[17px]"
+          >
+            <a class="hover:text-[#99e39e]" href="#main-banner">Buy & Sell</a>
+            <a class="hover:text-[#99e39e]" href="#development">Development</a>
+            <a class="hover:text-[#99e39e]" href="#work">Work</a>
+            <a class="hover:text-[#99e39e]" href="#portfolio">Portfolio</a>
+            <a class="hover:text-[#99e39e]" href="#upgrade">Upgrade</a>
+            <a class="hover:text-[#99e39e]" href="">Docs</a>
+          </nav>
+          <div class="hidden lg:flex gap-4">
+            <a
+              class="px-4 rounded-lg text-[#99e39e] hover:bg-[#99e39e] hover:text-black py-2 border border-[#99e39e]"
+              href=""
+              >Sign In</a
+            >
+            <a
+              class="px-4 rounded-lg bg-[#99e39e] hover:bg-transparent hover:text-[#99e39e] text-black py-2 border border-[#99e39e]"
+              href=""
+              >Sign Up</a
+            >
+          </div>
+          <div class="flex lg:hidden">
+            <button
+              type="button"
+              command="show-modal"
+              commandfor="mobile-menu"
+              class="p-2 block rounded-md text-white text-[24px]"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <el-dialog>
+        <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+          <div tabindex="0" class="fixed inset-0 focus:outline-none">
+            <el-dialog-panel
+              class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#000510] px-4 pb-4 sm:max-w-sm"
+            >
+              <div class="flex items-center justify-between py-5">
+                <a href="#">
+                  <img class="cursor-pointer" src="imgs/logo.svg" alt="" />
+                </a>
+                <button
+                  type="button"
+                  command="close"
+                  commandfor="mobile-menu"
+                  class="rounded-md text-white text-[24px] p-2"
+                >
+                  <i class="fa-solid fa-x"></i>
+                </button>
+              </div>
+              <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-white/10">
+                  <div class="space-y-2 py-8">
+                    <a
+                      href="#main-banner"
+                      class="block py-2 m-0 rounded-lg text-[#d8dbdb] hover:text-[#99e39e]"
+                      >Buy & Sell</a
+                    >
+                    <a
+                      href="#development"
+                      class="block py-2 m-0 rounded-lg text-[#d8dbdb] hover:text-[#99e39e]"
+                      >Development</a
+                    >
+                    <a
+                      href="#work"
+                      class="block py-2 m-0 rounded-lg text-[#d8dbdb] hover:text-[#99e39e]"
+                      >Work</a
+                    >
+                    <a
+                      href="#portfolio"
+                      class="block py-2 m-0 rounded-lg text-[#d8dbdb] hover:text-[#99e39e]"
+                      >Portfolio</a
+                    >
+                    <a
+                      href="#upgrade"
+                      class="block py-2 m-0 rounded-lg text-[#d8dbdb] hover:text-[#99e39e]"
+                      >Upgrade</a
+                    >
+                    <a
+                      href="#"
+                      class="block py-2 m-0 rounded-lg text-[#d8dbdb] hover:text-[#99e39e]"
+                      >Docs</a
+                    >
+                  </div>
+                  <div class="flex flex-col gap-4">
+                    <a
+                      class="px-4 rounded-lg text-[#99e39e] hover:bg-[#99e39e] hover:text-black py-2 border border-[#99e39e]"
+                      href=""
+                      >Sign In</a
+                    >
+                    <a
+                      class="px-4 rounded-lg bg-[#99e39e] hover:bg-transparent hover:text-[#99e39e] text-black py-2 border border-[#99e39e]"
+                      href=""
+                      >Sign Up</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </el-dialog-panel>
+          </div>
+        </dialog>
+      </el-dialog>
+    </header>
+    <main>
+      <section class="md:pt-40 md:pb-28 py-20" id="main-banner">
+        <div class="container px-4 mx-auto overflow-hidden">
+          <div class="grid grid-cols-12">
+            <div class="col-span-12 lg:col-span-5 text-center lg:text-start">
+              <div
+                class="mt-24 mb-5 flex items-center justify-center lg:justify-start gap-4"
+              >
+                <img src="imgs/icon-bag.svg" alt="" />
+                <span class="sm:text-[28px] text-[18px] text-white"
+                  >Crypto On The <span class="text-[#99e39e]">Go</span></span
+                >
+              </div>
+              <h1
+                class="text-white lg:text-[76px] md:text-[70px] text-[54px] font-medium leading-16 md:leading-24 mb-10"
+              >
+                Buy and Sell <span class="text-[#99e39e]">Crypto</span> of your
+                <span class="text-[#99e39e]">choice</span>!
+              </h1>
+              <div
+                class="flex gap-8 items-center justify-center md:justify-start mb-20"
+              >
+                <a
+                  class="px-7 rounded-lg text-[21px] bg-[#99e39e] hover:bg-transparent hover:text-[#99e39e] text-black py-2 border border-[#99e39e]"
+                  href=""
+                  >Buy Crypto</a
+                >
+                <a
+                  class="px-7 rounded-lg text-[21px] text-[#99e39e] hover:bg-[#99e39e] hover:text-black py-2 border border-[#99e39e]"
+                  href=""
+                  >Sell Crypto</a
+                >
+              </div>
+              <div
+                class="flex gap-12 mb-12 justify-center md:justify-start lg:justify-between"
+              >
+                <a
+                  href=""
+                  class="w-[40%] lg:w-[48%] hover:scale-105 transition-all"
+                  ><img class="" src="imgs/playstore.png"
+                /></a>
+                <a
+                  href=""
+                  class="w-[40%] lg:w-[48%] hover:scale-105 transition-all"
+                  ><img class="" src="imgs/applestore.png"
+                /></a>
+              </div>
+            </div>
+            <div class="ml-20 -mr-64 lg:col-span-7 hidden lg:block">
+              <img src="imgs/banner-image.png" />
+            </div>
+          </div>
+        </div>
+        <div class="owl-carousel owl-theme container mx-auto px-4">
+          <div class="item crypto-card px-5 py-6 bg-opacity-80 rounded-xl">
+            <div class="flex items-center gap-5">
+              <div class="rounded-full bitcoin-logo">
+                <img
+                  class="w-[46px] h-[46px]"
+                  src="imgs/icon-bitcoin-circle.svg"
+                />
+              </div>
+              <p class="text-white text-xs font-normal">
+                <span class="text-[16px] font-bold mr-2">Bitcoin Cash</span
+                >BTC/USD
+              </p>
+            </div>
+            <div class="flex justify-between mt-7">
+              <div>
+                <p class="text-[16px] font-bold text-white mb-0 leading-none">
+                  $443.27
+                </p>
+              </div>
+              <div>
+                <span class="text-red-800 text-xs">$3,785.82 (-88.3%)</span>
+              </div>
+            </div>
+          </div>
+          <div class="item crypto-card px-5 py-6 bg-opacity-80 rounded-xl">
+            <div class="flex items-center gap-5">
+              <div class="litecoin-logo px-4 py-3 rounded-full">
+                <img class="w-[18px] h-[23px]" src="imgs/icon-litecoin.svg" />
+              </div>
+              <p class="text-white text-xs font-normal">
+                <span class="text-[16px] font-bold mr-2">Litecoin</span>LTC/USD
+              </p>
+            </div>
+            <div class="flex justify-between mt-7">
+              <div>
+                <p class="text-[16px] font-bold text-white mb-0 leading-none">
+                  $86.11
+                </p>
+              </div>
+              <div>
+                <span class="text-red-800 text-xs">$410.26 (-79.1%)</span>
+              </div>
+            </div>
+          </div>
+          <div class="item crypto-card px-5 py-6 bg-opacity-80 rounded-xl">
+            <div class="flex items-center gap-5">
+              <div class="litecoin-logo px-4 py-3 rounded-full">
+                <img class="w-[18px] h-[23px]" src="imgs/icon-solana.svg" />
+              </div>
+              <p class="text-white text-xs font-normal">
+                <span class="text-[16px] font-bold mr-2">Solana</span>SOL/USD
+              </p>
+            </div>
+            <div class="flex justify-between mt-7">
+              <div>
+                <p class="text-[16px] font-bold text-white mb-0 leading-none">
+                  $238.70
+                </p>
+              </div>
+              <div>
+                <span class="text-red-800 text-xs">$259.96 (-8.2%)</span>
+              </div>
+            </div>
+          </div>
+          <div class="item crypto-card px-5 py-6 bg-opacity-80 rounded-xl">
+            <div class="flex items-center gap-5">
+              <div class="rounded-full">
+                <img class="w-[46px] h-[46px]" src="imgs/icon-dogecoin.svg" />
+              </div>
+              <p class="text-white text-xs font-normal">
+                <span class="text-[16px] font-bold mr-2">DOGECOIN</span>DOGE/USD
+              </p>
+            </div>
+            <div class="flex justify-between mt-7">
+              <div>
+                <p class="text-[16px] font-bold text-white mb-0 leading-none">
+                  $0.394
+                </p>
+              </div>
+              <div>
+                <span class="text-red-800 text-xs">$0.7316 (-46.2%)</span>
+              </div>
+            </div>
+          </div>
+          <div class="item crypto-card px-5 py-6 bg-opacity-80 rounded-xl">
+            <div class="flex items-center gap-5">
+              <div class="bitcoin-logo px-4 py-3 rounded-full">
+                <img class="w-[18] h-[23]" src="imgs/icon-bitcoin.svg" />
+              </div>
+              <p class="text-white text-xs font-normal">
+                <span class="text-[16px] font-bold mr-2">Bitcoin</span>BTC/USD
+              </p>
+            </div>
+            <div class="flex justify-between mt-7">
+              <div>
+                <p class="text-[16px] font-bold text-white mb-0 leading-none">
+                  $93,291.24
+                </p>
+              </div>
+              <div>
+                <span class="text-red-800 text-xs">$94,040.99 (-0.9%)</span>
+              </div>
+            </div>
+          </div>
+          <div class="item crypto-card px-5 py-6 bg-opacity-80 rounded-xl">
+            <div class="flex items-center gap-5">
+              <div class="litecoin-logo px-4 py-3 rounded-full">
+                <img class="w-[18] h-[23]" src="imgs/icon-ethereum.svg" />
+              </div>
+              <p class="text-white text-xs font-normal">
+                <span class="text-[16px] font-bold mr-2">Ethereum</span>ETH/USD
+              </p>
+            </div>
+            <div class="flex justify-between mt-7">
+              <div>
+                <p class="text-[16px] font-bold text-white mb-0 leading-none">
+                  $3,128.84
+                </p>
+              </div>
+              <div>
+                <span class="text-red-800 text-xs">$4,878.26 (-35.9%)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="lg:flex px-4 md:pt-28 container mx-auto overflow-hidden"
+        id="work"
+      >
+        <div class="lg:w-[50%]">
+          <span class="sm:text-[28px] text-[18px] text-white leading-0"
+            >Work with <span class="text-[#99e39e]">Us</span></span
+          >
+          <h1 class="text-white sm:text-[40px] text-[30px] font-medium mb-10">
+            Successfully launch your blockchain project.
+          </h1>
+          <div
+            class="flex md:flex-row flex-col gap-4 justify-center mt-11 mb-4"
+          >
+            <div class="flex items-center gap-5">
+              <div class="px-5 py-5 section-2-icons bg-opacity-30 rounded-full">
+                <img width="40" height="40" src="imgs/icon-consulting.svg" />
+              </div>
+              <p class="text-2xl text-[#d8dbdb]">Blockchain Consulting</p>
+            </div>
+            <div class="flex items-center gap-5">
+              <div class="px-5 py-5 section-2-icons bg-opacity-30 rounded-full">
+                <img width="40" height="40" src="imgs/icon-blockchain.svg" />
+              </div>
+              <p class="text-2xl text-[#d8dbdb]">Blockchain Solutions</p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col md:flex-row gap-4 mb-11 md:mb-0 justify-center"
+          >
+            <div class="flex items-center gap-5">
+              <div class="px-5 py-5 section-2-icons bg-opacity-30 rounded-full">
+                <img width="40" height="40" src="imgs/icon-Services.svg" />
+              </div>
+              <p class="text-2xl text-[#d8dbdb]">Custom Development</p>
+            </div>
+            <div class="hidden md:flex items-center gap-5 opacity-0">
+              <div class="px-5 py-5 section-2-icons bg-opacity-30 rounded-full">
+                <img width="40" height="40" src="imgs/icon-Services.svg" />
+              </div>
+              <p class="text-2xl text-[#d8dbdb]">Custom Development</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-[50%] flex justify-center items-center">
+          <img class="lg:w-[76%]" src="imgs/img-work-with-us.png" />
+        </div>
+      </section>
+      <section class="px-4 pt-9 md:pt-40" id="development">
+        <div class="text-center">
+          <h1 class="sm:text-[28px] text-[18px] text-white mb-9">
+            Development <span class="text-[#99e39e]">timeline</span>
+          </h1>
+          <p
+            class="sm:text-[40px] text-[30px] font-medium mb-20 text-white leading-12 tracking-wide"
+          >
+            We can enter at any point or help you all the <br />
+            way through the development cycle.
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-8 md:hidden">
+          <div class="flex gap-6 items-center">
+            <div class="p-6 rounded-full bg-[#2d2d2d73]">
+              <img src="imgs/icon-planning.svg" />
+            </div>
+            <div>
+              <h1 class="text-[#d8dbdb] text-[28px]">Planning</h1>
+              <p class="text-[#d8dbdb99] text-[18px]">
+                Map the project's scope and architecture
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-6 items-center">
+            <div class="p-6 rounded-full bg-[#2d2d2d73]">
+              <img src="imgs/icon-refinement.svg" />
+            </div>
+            <div>
+              <h1 class="text-[#d8dbdb] text-[28px]">Refinement</h1>
+              <p class="text-[#d8dbdb99] text-[18px]">
+                Refine and improve your solution
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-6 items-center">
+            <div class="p-6 rounded-full bg-[#2d2d2d73]">
+              <img src="imgs/icon-prototype.svg" />
+            </div>
+            <div>
+              <h1 class="text-[#d8dbdb] text-[28px]">Prototype</h1>
+              <p class="text-[#d8dbdb99] text-[18px]">
+                Build a working prototype to test your product
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-6 items-center">
+            <div class="p-6 rounded-full bg-[#2d2d2d73]">
+              <img src="imgs/icon-support.svg" />
+            </div>
+            <div>
+              <h1 class="text-[#d8dbdb] text-[28px]">Support</h1>
+              <p class="text-[#d8dbdb99] text-[18px]">
+                Deploy the product and ensure full support by us
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="relative hidden md:flex">
+          <img class="w-[60%] m-auto" src="imgs/img-timeline.png" />
+          <div
+            class="w-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] grid grid-cols-2 px-12 md:gap-64 lg:gap-112"
+          >
+            <div class="flex flex-row-reverse gap-6 items-center">
+              <div class="p-6 rounded-full bg-[#2d2d2d73]">
+                <img src="imgs/icon-planning.svg" />
+              </div>
+              <div>
+                <h1 class="text-[#d8dbdb] text-[28px]">Planning</h1>
+                <p class="text-[#d8dbdb99] text-[18px]">
+                  Map the project's scope and architecture
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-center">
+              <div class="p-6 rounded-full bg-[#2d2d2d73]">
+                <img src="imgs/icon-refinement.svg" />
+              </div>
+              <div>
+                <h1 class="text-[#d8dbdb] text-[28px]">Refinement</h1>
+                <p class="text-[#d8dbdb99] text-[18px]">
+                  Refine and improve your solution
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-row-reverse gap-6 items-center">
+              <div class="p-6 rounded-full bg-[#2d2d2d73]">
+                <img src="imgs/icon-prototype.svg" />
+              </div>
+              <div>
+                <h1 class="text-[#d8dbdb] text-[28px]">Prototype</h1>
+                <p class="text-[#d8dbdb99] text-[18px]">
+                  Build a working prototype to test your product
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-center">
+              <div class="p-6 rounded-full bg-[#2d2d2d73]">
+                <img src="imgs/icon-support.svg" />
+              </div>
+              <div>
+                <h1 class="text-[#d8dbdb] text-[28px]">Support</h1>
+                <p class="text-[#d8dbdb99] text-[18px]">
+                  Deploy the product and ensure full support by us
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="px-4 container mx-auto md:pt-44 sm:pt-24 pt-12">
+        <div
+          class="powered-by-card flex flex-col lg:flex-row gap-6 lg:gap-0 items-center justify-between rounded-3xl px-16 py-14"
+        >
+          <div>
+            <h1 class="text-[30px] sm:text-[40px] text-white mb-4">
+              Powered by the Cryp<span class="text-[#99e39e]">go</span> Platform
+            </h1>
+            <p class="text-[#d8dbdb] opacity-60 text-[18px]">
+              Our products empower people to have safer and more<br />
+              trustworthy experiences.
+            </p>
+          </div>
+          <a
+            class="px-5 rounded-lg text-[21px] font-medium bg-[#99e39e] hover:bg-transparent hover:text-[#99e39e] text-black py-3 border border-[#99e39e]"
+            href=""
+            >Get Started</a
+          >
+        </div>
+      </section>
+      <section
+        class="container mx-auto flex flex-col lg:flex-row gap-20 lg:pt-48 sm:pt-28 pt-12 px-4 lg:px-12"
+        id="portfolio"
+      >
+        <div class="lg:w-[50%] lg:flex">
+          <img class="object-cover" src="imgs/img-portfolio.png" />
+        </div>
+        <div class="lg:w-[50%] lg:text-center text-start">
+          <div class="flex items-center justify-start lg:justify-center gap-4">
+            <span class="text-[18px] sm:text-[28px] text-[#d8dbdb]"
+              >Cryptocurrency
+              <span class="text-[#99e39e]">Portfolio</span></span
+            >
+          </div>
+          <h1 class="text-white text-[30px] sm:text-[40px] font-medium">
+            Create your crypto portfolio today with Cryp<span
+              class="text-[#99e39e]"
+              >go</span
+            >!
+          </h1>
+          <p class="text-[#d8dbdb99] text-opacity-60 text-[18px] my-4">
+            Coinbase has a variety of features that make it the best<br
+              class="md:block hidden"
+            />
+            place to start trading.
+          </p>
+          <div>
+            <div class="flex portfolio py-5 items-center gap-6">
+              <div class="bg-[#99e39e33] p-4 rounded-full">
+                <img src="imgs/icon-wallet.svg" />
+              </div>
+              <p class="text-[#d8dbdb] text-[28px]">Manage your Portfolio</p>
+            </div>
+            <div class="flex portfolio py-5 items-center gap-6">
+              <div class="bg-[#99e39e33] p-4 rounded-full">
+                <img src="imgs/icon-vault.svg" />
+              </div>
+              <p class="text-[#d8dbdb] text-[28px]">Vault Protection</p>
+            </div>
+            <div class="flex portfolio py-5 items-center gap-6">
+              <div class="bg-[#99e39e33] p-4 rounded-full">
+                <img src="imgs/icon-mobileapp.svg" />
+              </div>
+              <p class="text-[#d8dbdb] text-[28px]">Mobile Apps</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="lg:flex container mx-auto px-4 overflow-hidden md:py-40 py-20"
+        id="upgrade"
+      >
+        <div class="lg:w-[50%] flex flex-col justify-center">
+          <span class="text-[18px] sm:text-[28px] text-[#99e39e] leading-3"
+            >Upgrade</span
+          >
+          <h1
+            class="text-white text-[30px] sm:text-[40px] font-medium my-4 leading-10"
+          >
+            Upgrade Your Storage Layer
+          </h1>
+          <p class="text-[#d8dbdb99] text-[18px] mb-7">
+            Get faster, safer, more affordable cloud object storage with no
+            centeral point of failure.
+          </p>
+          <div
+            class="grid lg:w-[70%] sm:grid-cols-2 sm:gap-10 gap-5 text-nowrap"
+          >
+            <div class="flex gap-5">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  class="iconify iconify--la text-white group-hover:text-primary"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13s13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5c0 6.102-4.898 11-11 11S5 22.102 5 16S9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3m11.281 4.281L16 18.563l-4.281-4.282l-1.438 1.438l5 5l.719.687l.719-.687l12-12z"
+                  ></path>
+                </svg>
+              </div>
+              <p class="text-[18px] text-[#d8dbdb99]">100% Secure</p>
+            </div>
+            <div class="flex gap-5">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  class="iconify iconify--la text-white group-hover:text-primary"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13s13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5c0 6.102-4.898 11-11 11S5 22.102 5 16S9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3m11.281 4.281L16 18.563l-4.281-4.282l-1.438 1.438l5 5l.719.687l.719-.687l12-12z"
+                  ></path>
+                </svg>
+              </div>
+              <p class="text-[18px] text-[#d8dbdb99]">A Fraction of the Cost</p>
+            </div>
+            <div class="flex gap-5">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  class="iconify iconify--la text-white group-hover:text-primary"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13s13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5c0 6.102-4.898 11-11 11S5 22.102 5 16S9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3m11.281 4.281L16 18.563l-4.281-4.282l-1.438 1.438l5 5l.719.687l.719-.687l12-12z"
+                  ></path>
+                </svg>
+              </div>
+              <p class="text-[18px] text-[#d8dbdb99]">More Durable</p>
+            </div>
+            <div class="flex gap-5">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  class="iconify iconify--la text-white group-hover:text-primary"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13s13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5c0 6.102-4.898 11-11 11S5 22.102 5 16S9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3m11.281 4.281L16 18.563l-4.281-4.282l-1.438 1.438l5 5l.719.687l.719-.687l12-12z"
+                  ></path>
+                </svg>
+              </div>
+              <p class="text-[18px] text-[#d8dbdb99]">Easier to Use</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-[50%] flex justify-center items-center">
+          <img src="imgs/img-upgrade.png" />
+        </div>
+      </section>
+      <section class="pb-28 container mx-auto px-4">
+        <div class="text-center">
+          <h1 class="text-[18px] sm:text-[28px] mb-9 text-[#d8dbdb] leading-0">
+            Always by <span class="text-[#99e39e]">your side</span>
+          </h1>
+          <hr class="text-[#99e39e] border border-[#99e39e] w-8 m-auto" />
+          <p class="text-[30px] sm:text-[40px] font-medium mb-20 text-white">
+            Be the first to use our Cryo<span class="text-[#99e39e]">go</span>!
+          </p>
+        </div>
+        <div
+          class="powered-by-card grid grid-cols-1 md:grid-cols-3 lg:flex-row gap-6 lg:gap-0 items-center justify-between rounded-3xl px-16 py-14"
+        >
+          <div class="flex flex-col text-center">
+            <div class="mx-auto p-4 rounded-full w-19 h-19 bg-[#99e39e40]">
+              <img src="imgs/icon-support (1).svg" />
+            </div>
+            <h1 class="text-white text-[28px] mt-8 mb-4">24/7 Support</h1>
+            <div class="text-[#d8dbdb99]">
+              Need help? Get your requests solved quickly via support team.
+            </div>
+          </div>
+          <div class="flex flex-col text-center">
+            <div class="mx-auto p-4 rounded-full w-19 h-19 bg-[#99e39e40]">
+              <img src="imgs/icon-community.svg" />
+            </div>
+            <h1 class="text-white text-[28px] mt-8 mb-4">Community</h1>
+            <div class="text-[#d8dbdb99]">
+              Join the conversations on our wordwide OKEx communities
+            </div>
+          </div>
+          <div class="flex flex-col text-center">
+            <div class="mx-auto p-4 rounded-full w-19 h-19 bg-[#99e39e40]">
+              <img src="imgs/icon-academy.svg" />
+            </div>
+            <h1 class="text-white text-[28px] mt-8 mb-4">Academy</h1>
+            <div class="text-[#d8dbdb99]">
+              Learn blockchain and crypto for free.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="container mx-auto px-4 pt-16 pb-16 grid grid-cols-1 sm:grid-cols-6 md:grid-cols-9 justify-between lg:grid-cols-12"
+    >
+      <div class="col-span-4 flex flex-col justify-between">
+        <div class="flex flex-col gap-3">
+          <div>
+            <a href="#"><img src="imgs/logo.svg" /></a>
+          </div>
+          <div class="flex gap-4">
+            <a href=""
+              ><i class="text-[#d8dbdb] text-2xl fa-brands fa-facebook-f"></i
+            ></a>
+            <a href=""
+              ><i class="text-[#d8dbdb] text-2xl fa-brands fa-instagram"></i
+            ></a>
+            <a href=""
+              ><i class="text-[#d8dbdb] text-2xl fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
+        </div>
+        <div class="mt-6 lg:m-0">
+          <h1 class="font-medium text-2xl text-[#d8dbdb]">
+            2025 Copyright | Crypgo
+          </h1>
+        </div>
+        <div class="my-6 lg:m-0">
+          <p class="text-[#d8dbdb] text-2xl font-medium">
+            Distributed by
+            <a href=""> ThemeWagon</a>
+          </p>
+        </div>
+      </div>
+      <div
+        class="col-span-3 flex flex-col justify-start items-start mb-6 md:mb-0"
+      >
+        <h1 class="font-medium text-[#d8dbdb] text-2xl">Links</h1>
+        <a
+          class="hover:text-[#99e39e] text-[#d8dbdb] text-[17px] mb-4 font-medium mt-4"
+          href=""
+          >Buy & Sell</a
+        >
+        <a
+          class="hover:text-[#99e39e] text-[#d8dbdb] text-[17px] mb-4 font-medium"
+          href=""
+          >Development</a
+        >
+        <a
+          class="hover:text-[#99e39e] text-[#d8dbdb] text-[17px] mb-4 font-medium"
+          href=""
+          >Work</a
+        >
+        <a
+          class="hover:text-[#99e39e] text-[#d8dbdb] text-[17px] mb-4 font-medium"
+          href=""
+          >Portfolio</a
+        >
+        <a
+          class="hover:text-[#99e39e] text-[#d8dbdb] text-[17px] mb-4 font-medium"
+          href=""
+          >Upgrade</a
+        >
+        <a
+          class="hover:text-[#99e39e] text-[#d8dbdb] text-[17px] mb-4 font-medium"
+          href=""
+          >Docs</a
+        >
+      </div>
+      <div
+        class="col-span-2 flex flex-col justify-start items-start mb-6 md:mb-0"
+      >
+        <h1 class="font-medium text-[#d8dbdb] text-2xl">Information</h1>
+        <a
+          class="hover:text-[#99e39e] text-[#d8dbdb] text-[17px] mb-4 font-medium mt-4"
+          href=""
+          >Terms</a
+        >
+        <a
+          class="hover:text-[#99e39e] text-[#d8dbdb] text-[17px] mb-4 font-medium"
+          href=""
+          >Disclosures</a
+        >
+        <a
+          class="hover:text-[#99e39e] text-[#d8dbdb] text-[17px] mb-4 font-medium"
+          href=""
+          >Disclosures</a
+        >
+        <a
+          class="hover:text-[#99e39e] text-[#d8dbdb] text-[17px] mb-4 font-medium"
+          href=""
+          >Latest News</a
+        >
+      </div>
+      <div class="col-span-3 flex flex-col justify-start">
+        <h1 class="font-medium text-[#d8dbdb] text-2xl mb-4">Subscribe</h1>
+        <p class="text-[#d8dbdb99] text-[18px] mb-4">
+          Subscribe to get the latest news form us
+        </p>
+        <form class="relative" action="">
+          <input
+            type="email"
+            placeholder="Enter Email"
+            class="border w-full border-[#95959599] text-white px-6 py-4 rounded-lg"
+          />
+          <a class="absolute right-6 top-[50%] translate-y-[-50%]" href=""
+            ><i class="text-[#99e39e] fa-solid fa-paper-plane"></i
+          ></a>
+        </form>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 20,
+        dots: false,
+        nav: false,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          480: {
+            items: 2,
+          },
+          1024: {
+            items: 4,
+          },
+        },
+        autoplay: true,
+        autoplayTimeout: 1500,
+        autoplayHoverPause: true,
+      });
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+      integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+      type="module"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const header = document.getElementById("site-header");
+
+        const originalPadding = window.getComputedStyle(header).paddingTop;
+
+        function onScroll() {
+          if (window.scrollY > 10) {
+            header.style.backgroundColor = "black";
+            header.style.boxShadow = "0 6px 18px rgba(0,0,0,0.4)";
+            header.style.paddingTop = "20px";
+          } else {
+            header.style.backgroundColor = "transparent";
+            header.style.boxShadow = "none";
+            header.style.paddingTop = originalPadding;
+          }
+        }
+
+        window.addEventListener("scroll", onScroll);
+        onScroll();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+* {
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background-color: rgb(0, 5, 16);
+}
+
+.crypto-card {
+  background-color: rgb(30, 34, 41);
+}
+
+.litecoin-logo {
+  background-color: rgb(80, 80, 80);
+}
+
+.bitcoin-logo {
+  background-color: rgba(247, 148, 26, 0.2);
+}
+
+.section-2-icons {
+  background-color: rgba(80, 80, 80, 0.3);
+}
+
+.powered-by-card {
+  background-color: rgba(115, 115, 115, 0.1);
+  border: 2px solid rgba(115, 115, 115, 0.2);
+}
+
+.portfolio {
+  border-bottom: 1px solid rgba(149, 149, 149, 0.1);
+}
