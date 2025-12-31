@@ -14,26 +14,11 @@ A clean, modern, and fully responsive Crypgo Landing Page Clone, built using HTM
 
 ## 📚 Table of Contents
 - [Overview](#-overview)
-- [Features](#-features)
 - [Technologies Used](#-technologies-used)
 - [Credits](#-credits)
 
 ## 🔍 Overview
-
-iLanding is a simple and clean landing page built by following a real template for learning purposes (tried my best to make it identical).
-The goal of this project was to understand:
-- Bootstrap’s grid system
-- Responsive UI building
-- Basic component usage
-- Spacing, alignment, and layout structure
-
-## ✨ Features
-
-- Fully responsive layout
-- Clean and minimal design
-- Bootstrap 5 components
-- Modern landing page structure
-- Mobile-friendly sections
+A responsive Crypgo landing page clone built with HTML and Tailwind CSS, featuring a clean UI and mobile-friendly design. Inspired by the original Crypgo website design.
 
 ## 🛠 Technologies Used
 - HTML5
@@ -41,5 +26,4 @@ The goal of this project was to understand:
 - Bootstrap 5
 
 ## 🙏 Credits
-
-- Reference template: [iLanding demo template by BootstrapMade](https://bootstrapmade.com/demo/iLanding/)
+- Reference template: [Crypgo demo template by themewagon]([https://bootstrapmade.com/demo/iLanding/](https://themewagon.github.io/Crypgo/))
